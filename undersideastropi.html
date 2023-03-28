@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+ <style>
+  body {
+      background: linear-gradient(#4158D0,#50C8C3,#FF70F6);
+    height: 525vh;
+    }
+       h1 {
+        color: white;
+        text-align: center;
+            }
+     h2 {
+         color: white;
+         text-align: center;
+     }
+     h3 {
+         color: white;
+         text-align: center;
+         font-style:italic;
+     }
+     img {
+         width:200px
+     }
+     
+     .logocontainer {
+         display: flex;
+         width: 100vw;
+         justify-content: center;
+         align-content: center;
+     }
+      .flowchart {
+         display: flex;
+         width: 100vw;
+         justify-content: center;
+         align-content: center;
+     }
+     
+     .navne {
+         color: white;
+         text-align: center;
+         font-style:italic;
+     }
+     .paragraph1 {
+         color: white;
+         text-align: center;
+         width:50vw;
+     }
+     
+     .container1 {
+         display: flex;
+         justify-content: center;
+     }
+      .paragraph2 {
+         color: white;
+         text-align: center;
+         width:50vw;
+     }
+     
+     .container2 {
+         display: flex;
+         justify-content: center;
+     }
+     
+     h4 {
+         color: white;
+         text-align: center;
+     }
+     
+    .vedhaeft {
+    text-align: center;
+     }
+     
+    </style>
+    
+    <h1>Astro-Pi - Projekt Blåbåd</h1>
+    <a href="index.html"> <button>Tilbage til startside</button>
+    </a>
+    <br>
+    <div class="navne">
+         Oskar, Hannibal og Zacharias
+         </div>
+    <br>
+    <br>
+    <div class="logocontainer">
+            <img src="astropilogo.svg">
+    </div> 
+<br>
+    <br>
+    <h2>På denne underside er der en gennemgang af vores projekt, samt eksempler på hvordan vores kode fungerer</h2>
+    <br>
+    <br>
+    <h3>Describe your team’s experiment and what they plan to investigate:</h3>
+    <div class="container1">
+        <div class="paragraph1">
+            <p>Our team plans on investigating the albedo of major cities compared to one another. Our experiment could inspire suggestions on how you could increase the albedo effect of major cities, which would ultimately lower their temperature. The comparison would rely on how the different cities are constructed and arranged.</p>
+        </div>
+    </div>
+    
+    <br>
+    <h3>What type of data does your team plan to gather?</h3>
+    <div class="container2">
+        <div class="paragraph2">
+            <p>We plan to extract the albedo from all the major cities, to figure out which cities reflect the most light. We will then compare the albedo to the average temperature of the cities. We will also take into account the different climate zones around earth, in which the cities are located. If possible, we could also investigate how the albedo effect differs between the citycenters and their suburbs. We plan to calculate the albedo by adding up the different red, green and blue colours in each pixel in our pictures. If the picture has a maximum colour value of all the colours, the maximum value per pixel would be 765, and if less light is reflected the value of the pixel would be lower. Our data would be pictures that have been specifically coded to certain coordinates of the major cities. Cities that are visible from the 3 hour orbit. If possible we would like to investigate major cities such as: Copenhagen, Tokyo, New York, Shanghai, Beijing, Toronto, Amsterdam, Chicago, Mexico City, New Delhi, Oslo, Stockholm, Osaka, Kyoto, Nairobi, Laos, Cairo, Capetown and many more.</p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <h2>ESA's specifikationer (Phase 1)</h2>
+    <br>
+    <h4>Beskrivelse af sensor:</h4>
+     <div class="container2">
+        <div class="paragraph2">
+            <p>
+            Den sensor vi bruger er kameraret, da den bliver brugt til at observere en by i de fem sekunder der skal filmes. Det vi planlagde var at udregne en farve eller albedoværdi af hver pixel ved brug af numphy funktionen, så vi kunne få et overblik af albedo værdien af de forskellige byer som ISS passere.
+            </p>
+        </div>
+    </div>
+    <h4>Uafhængigt program:</h4>
+    <div class="container2">
+        <div class="paragraph2">
+            <p>
+            Det var et krav for eksperimentet at det ikke måtte afhænge af astronauternes arbejdsgang. Dette løste vi ved at indføre en afstandstrigger der ligesom udløste kameraet når noget, som ikke havde noget med astronauternes arbejdsgang at gøre.
+            </p>
+        </div>
+    </div>
+    <h4>Skal være uafhængig af dato og/eller tid:</h4>
+    
+    <div class="container2">
+        <div class="paragraph2">
+            <p>
+            Et andet krav for eksperimentet var, at det ikke måtte være afhængigt af at køre på et bestemt tidspunkt af dagen eller en bestemt dato. Dette krav var lidt mere problematisk at forholde hos til, da vi ikke ville kunne bruge data indsamlet fra de områder på jorden, hvor det var nat. Som det er nu, vil kameraet alt andet lige også optage mens det er dag, men kravet gør det nødvendigt for os at forholde hos til et tredje krav, nemlig hvor meget data vi kan indsamle. 
+            </p>
+        </div>
+    </div>
+
+
+    <h4>Max 3GB data:</h4>
+    <div class="container2">
+        <div class="paragraph2">
+            <p>
+           Et tredje krav for eksperimentet var at det ikke måtte indsamle mere end 3GB data, hvilket kunne blive en udfordring da vi henter videodata, som i løbet af 3 timer hurtig kan fylde 3 GB. For at overkomme dette kunne vi eventuelt indfører sleepfunktioner, der gør så kameraet ikke optager når ISS passerer dele af jordkloden hvor det er nat.
+            </p>
+        </div>
+    </div>
+    
+    <h4>Koden må ikke afhænge af, at ISS passerer et bestemt sted på jorden:</h4>
+    
+    <div class="container2">
+        <div class="paragraph2">
+            <p>
+           Et fjerde krav, som nok er det der udfordrer vores kode mest, er kravet om at koden ikke må afhænge af at ISS passerer et særligt sted på jorden. Et af målene med vores eksperiment var at kunne analysere albedo data for større byer, og hvis ISS ikke passerer nogle, vil der ikke rigtig komme noget værdifuldt data ud af eksperimentet. Vi har dog valgt at antage at ISS i løbet af de 3 timer, hvor ISS når 2 gange rundt om jorden, vil passere i hvert fald 2 større byer, som vi så ville hente billeder eller videodata fra. En måde at imødekomme denne problemstilling, kunne bestå i form af lidt grundigere forarbejde, så vi kune danne os et overblik over hvilke områder på jorden ISS passerer og hvilke byer den nok også ville passerere.
+            </p>
+        </div>
+    </div>
+    <br>
+    <h2>ESA's specifikationer (Phase 2)</h2>
+    <br>
+    <h4>Koden skal stoppe automatisk efter 3 timer:</h4>
+    
+    <div class="container2">
+        <div class="paragraph2">
+            <p>
+           Det eneste kriterie, som vi fandt særlig relevant for vores projekt under fase 2 checklist, var at programmet skulle stoppe efter 3 timer. Dette kunne vi have tacklet ved at køre en form for tidsfunktion over vores loop og så et "break" efter de 3 timer, eller andet så eksperimentet ville stoppe af sig selv.
+            </p>
+        </div>
+    </div>
+    <br>
+   
+    
+    <h2>Beskrivelse af hvilken sensor vi bruger</h2>
+        
+    <div class="container2">
+        <div class="paragraph2">
+            <p>
+           Den sensor vi bruger er kamerat da den bliver brugt til observere en by i de fem sekundter der skal filmes. Det vi planlagde var at udregne en farve eller albedo værdi af hver pixel i billede/videodataen ved brug af numphy funktionen, så vi kunne få et overblik af albedo værdien af de forskellige byer som ISS passere.
+            </p>
+        </div>
+    </div>
+    <br>
+    
+    <h2>Grundig beskrivelse af testmåling af mindst en sensor, samt gennemgang af relevante kodestumper.</h2>
+    <div class="container2">
+        <div class="paragraph2">
+            <p>
+           Følgende kode er bestemmende for testmålingen med kameraet som sensor.
+            </p>
+        </div>
+    </div>
+    <br>
+     <div class="logocontainer">
+            <img src="picamera.png">
+    </div> 
+    <br>
+     <div class="container2">
+        <div class="paragraph2">
+            <p>
+           Først defineres variablerne "dy" og "dx" for distance y og distance x. "dy" er longitude eller længdegrad og "dx" er latitude eller breddegrad. De to variable sættes lig differencen mellem ISS's og den nærmeste by's længde- og breddegrader. Subtraktion er omsluttet af en "abs" kommando, der sørger for at afstanden kommer ud i absolutte tal således at fortegn ikke er afgørende. <br> Herefter printes de to værdier for overblik.<br> Herefter indledes en "if-funktion" med betingelsen værende at værdien af dy+dx er mindre end 2, men har en værdi på over 0. Grunden til at vi har valgt tallet 2 er at det ca. svarer til en distance på 10km når man regner i længde- og breddegrader.<br>
+    
+Hvis summen af dy og dx er mellem 2 og 0, begynder if-statementet og kameraet starter og tillader at se hvad der skal filmes med kommandoen "camera.start_preview". Herefter begynder filmningen med kommandoen camera.start_recording. Det der står i den efterfølgende parantes angiver hvorhenne hvor videodataen skal lagres. Herefter kommer kommandon "sleep 5" som angiver at sensoren ikke skal foretage sig noget andet i de fem sekundter.<br> Herefter indtræder kommandoen "camera.stop_recording" som stopper optagelsen, til sidst står "camera.stop_preview" som slukker kameraet.
+            </p>
+        </div>
+    </div>
+    <br>
+    <h2>Anden relevant kodestump</h2>
+     <div class="logocontainer">
+            <img src="kodestump.png">
+    </div> 
+    
+     <div class="container2">
+        <div class="paragraph2">
+            <p>
+                Her bliver der først tilføjet et "while-true" statement, som gør at programmet bliver med at udføre følgende kode indtil at den bliver "breaket". Herefter definerer vi variablen "coordinates", til at være den internationale rumstations nuværende position i koordinater. Så definerer vi en ny variabel der hedder "coordinate_pair", som konverterer ISS koordinaterne til et format som kan bruges med "reverse_geocoder" modulet Som derefter bliver brugt til at finde den by som er nærmest rumstationen. Til sidst får vi den til at "print(location)" som outputter lokationen af den nærmeste by.
+            </p>
+        </div>
+    </div>
+    
+    
+    <h2>Flowchart af vores kode</h2>
+    
+    <div class="flowchart">
+    <img src="flowchartastropi.png">
+    </div>
+    <br>
+    <h2>Kode vedhæftet her:</h2>
+    
+    <div class="vedhaeft">
+    <a href="bl%C3%A5b%C3%A5d.py"> <button>blåbåd.py</button> </a>
+    </div>
+</html>

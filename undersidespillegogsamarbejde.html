@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<style>
+  body {
+      background-color: red;
+          }
+    h1 {
+        color: white;
+        text-align: center;
+            }
+    .navne {
+         color: white;
+         text-align: center;
+         font-style:italic;
+    }
+    .logocontainer {
+         display: flex;
+         width: 100vw;
+         justify-content: center;
+         align-content: center;
+     }
+    
+    #makeybilled{
+        width:50vw
+    }
+    .paragraph1 {
+         color: white;
+         text-align: center;
+         width:50vw;
+     }
+      .container1 {
+         display: flex;
+         justify-content: center;
+     }
+     h2 {
+         color: white;
+         text-align: center;
+     }
+     h3 {
+         color: white;
+         text-align: center;
+     }
+    .paragraph2 {
+         color: white;
+         text-align: center;
+         width:50vw;
+     }
+     
+     .container2 {
+         display: flex;
+         justify-content: center;
+     }
+    h4 {
+         color: white;
+         text-align: center;
+     }
+    
+    #makeaction{
+        width: 25%;
+    }
+    
+    #makeylayout{
+        width: 25%;
+    }
+    
+    #makeyflowchart{
+        width: 35%;
+    }
+    
+    #makeystump1{
+        width: 35%;
+    }
+     #makeystump2{
+        width: 35%;
+    }
+    
+    </style>
+    <a href="index.html"> <button>Tilbage til startside</button>
+    </a>
+    
+    <h1>Spil, leg og samarbejde</h1>
+    <div class="navne">
+         Oskar, Malthe, Rasmus og Wilma
+         </div>
+    <br>
+    <div class="logocontainer">
+            <img id="makeybilled" src="makeymakey.png">
+    </div> 
+    
+    <br>
+    <br>
+    <h2>Introduktion til projektet:</h2>
+    <div class="container1">
+        <div class="paragraph1">
+            <p>I "spil, leg og samarbejde" forløbet har vi arbejdet på at skabe et computerspil fra bunden, som dog ikke må kunne styres med kun en computer. Derfor har vi også arbejdet med en "Makey Makey": et praktisk interface der kommunikerer med computeren på samme måde som et keyboard, men hvor den ved hjælp af svage elektriske kredsløb kan skabe inputs fra stort set hvad som helst. Derudover har vi programmeret selve spillet i sproget python.</p>
+        </div>
+    </div>
+    <br>
+    <h3>Vores idé:</h3>
+    <div class="container2">
+        <div class="paragraph2">
+            <p>Vi har trukket inspiration fra genren "fighting games", som for eksempel det populære "Street Fighter". Vi tænkte, at vi ville tage en meget forsimplet version af denne type spil, og forsøge at bringe det ud i 3D-verdenen. Det fungerer således: der er 2 spillere ad gangen. Hver spiller har et "sværd", som man kan bruge til at slå den anden. Hver gang et slag rammer, mister modstanderen to HP (health points). Derudover kan man også bruge et "special attack" som gør 5 skade på modstanderen. Efter hvert "special attack" er der en cooldown periode på et antal sekunder før spilleren kan bruge det igen. Når ens modstander ikke har flere HP tilbage, er spillet ovre.</p>
+        </div>
+    </div>
+    <br>
+    <h4>Layout:</h4>
+    <center><img src="makeymakeylayout.png" id="makeylayout"></center>
+    
+    <br>
+    <br>
+    <h4>Game in action:</h4>
+    
+    <center><img src="makeymakeyinaction.png" id="makeaction"></center>
+    
+    <br>
+    <br>
+    <h4>Fejlkilder:</h4>
+    <div class="container2">
+        <div class="paragraph2">
+            <p>Efter vores play-test af spillet, fandt vi en del problemer ved den praktiske udførsel af spillet. Først og fremmest, er opstilling besværlig og tidskrævende. Det tager lang tid at tilslutte alt til makeymakey'en og det er svært at lave "rustningen" eftersom at den kun dækker én del af kroppen - torsoen. Hvis den f.eks. også skulle dække armene ville det kræven flere ledninger som skulle tilsluttes til ground. Ledningerne er i forvejen et problem, da fylder meget og derfor falder nemt ned fra sværdene og rustningerne, og dermed stopper spillet. Sværdet består stort set kun af sølvpapir, hvilket betyder at det nemt knækker og gør det svært at spille. Derudover skal det bemærkes at "special attacks" endnu ikke fungerer i praksis, hvilket fjerner en stor del af spillet.</p>
+        </div>
+    </div>
+    
+    <h4>Kodestumper:</h4>
+    <center><img src="makeystump1.png" id="makeystump1"></center>
+    <br>
+    <div class="container2">
+        <div class="paragraph2">
+            <p>Dette er livkassen. Den bestemmer efter hvor meget liv spilleren har, hvilken farve "health-bar'en" har. Øverst står der at hvis spiller 1 har mindre end 55 liv, skal programmet tegne et grønt rektangel. Nedenunder står der at hvis spiller 1 har 55 liv eller under, skal den tegne et gult rektangel.</p>
+        </div>
+    </div>
+    <br>
+    <center><img src="makeystump2.png" id="makeystump2"></center>
+    
+    
+    <br>
+    <br>
+    <h4>Flowchart:</h4>
+    <center><img src="Makeyflowchart.png" id="makeyflowchart"></center>
+    
+    
+    
+
+
+
+
+
+
+
+
+</html>
